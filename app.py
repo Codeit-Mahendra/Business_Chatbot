@@ -62,6 +62,7 @@ retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":
 #     task="text-generation"
 # )
 
+
 from langchain_openai import ChatOpenAI
 
 chatModel = ChatOpenAI(
