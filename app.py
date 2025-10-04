@@ -29,7 +29,7 @@ docsearch = PineconeVectorStore.from_existing_index(
     embedding=embeddings
 )
 
-retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":3})
+retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k": 4})
 
 # -----------------------------------------------
 # Custom LLM class for Hugging Face
@@ -69,7 +69,7 @@ chatModel = ChatOpenAI(
     openai_api_key=os.getenv("GROQ_API_KEY"),
     openai_api_base="https://api.groq.com/openai/v1",
     max_tokens=500,
-    temperature=0.7
+    temperature=0
 )
 
 # --------------------------------------------------------
